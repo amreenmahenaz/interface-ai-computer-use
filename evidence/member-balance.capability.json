@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "id": "legacy.member.read-savings",
+  "name": "Read member savings balance",
+  "description": "Looks up a member and returns the displayed savings balance.",
+  "app": {
+    "family": "legacy-credit-union-demo",
+    "version": "1.x",
+    "entrypoint": "http://127.0.0.1:3000/legacy"
+  },
+  "approval": "draft",
+  "inputs": {
+    "memberId": {
+      "type": "string",
+      "required": true,
+      "sensitive": true,
+      "pattern": "^\\d{5}$"
+    }
+  },
+  "outputs": {
+    "savingsBalance": {
+      "type": "string",
+      "sensitive": true
+    }
+  },
+  "steps": [
+    {
+      "id": "open",
+      "action": "goto",
+      "value": "http://127.0.0.1:3000/legacy",
+      "risk": "safe"
+    },
+    {
+      "id": "step-1",
+      "action": "fill",
+      "target": {
+        "label": "Member number"
+      },
+      "value": "{{memberId}}",
+      "risk": "safe"
+    },
+    {
+      "id": "step-2",
+      "action": "click",
+      "target": {
+        "role": "button",
+        "name": "Find member"
+      },
+      "risk": "safe"
+    },
+    {
+      "id": "step-3",
+      "action": "extract",
+      "target": {
+        "label": "Savings balance"
+      },
+      "output": "savingsBalance",
+      "risk": "safe"
+    }
+  ],
+  "checkpoint": {
+    "kind": "visible",
+    "target": {
+      "label": "Savings balance"
+    }
+  },
+  "outcomes": [
+    {
+      "code": "MEMBER_NOT_FOUND",
+      "target": {
+        "text": "No member found"
+      },
+      "message": "No member exists for the supplied identifier."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{"at":"2026-09-08T23:25:08.045Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"step_completed","stepId":"open","detail":{"action":"goto"}}
+{"at":"2026-09-08T23:25:08.113Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"fixture_decision","stepId":"discover-1","detail":{"rationale":"Enter the member identifier from the goal.","action":"fill","observationLength":780,"provider":"offline-fixture"}}
+{"at":"2026-09-08T23:25:08.248Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"step_completed","stepId":"step-1","detail":{"action":"fill"}}
+{"at":"2026-09-08T23:25:08.255Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"fixture_decision","stepId":"discover-2","detail":{"rationale":"Submit the lookup form.","action":"click","observationLength":803,"provider":"offline-fixture"}}
+{"at":"2026-09-08T23:25:08.302Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"step_completed","stepId":"step-2","detail":{"action":"click"}}
+{"at":"2026-09-08T23:25:08.342Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"fixture_decision","stepId":"discover-3","detail":{"rationale":"The requested balance is visible.","action":"extract","observationLength":836,"provider":"offline-fixture"}}
+{"at":"2026-09-08T23:25:08.830Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"step_completed","stepId":"step-3","detail":{"action":"extract"}}
+{"at":"2026-09-08T23:25:08.905Z","runId":"discovery-2026-09-08T23-25-04-839Z","type":"artifact_saved","detail":{"artifactFile":"evidence/member-balance.capability.json"}}

@@ -1,0 +1,3 @@
+{"at":"2026-09-14T05:56:52.278Z","runId":"replay-2026-09-14T05-56-52-145Z","type":"run_started","detail":{"capability":"legacy.member.read-savings","inputs":["memberId"]}}
+{"at":"2026-09-14T05:56:52.279Z","runId":"replay-2026-09-14T05-56-52-145Z","type":"step_started","stepId":"open","detail":{"action":"goto","risk":"safe"}}
+{"at":"2026-09-14T05:56:53.126Z","runId":"replay-2026-09-14T05-56-52-145Z","type":"run_failed","stepId":"open","detail":{"error":"page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:3000/legacy\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:3000/legacy\", waiting until \"domcontentloaded\"\u001b[22m\n","evidence":"evidence/failures/replay-2026-09-14T05-56-52-145Z.png"}}

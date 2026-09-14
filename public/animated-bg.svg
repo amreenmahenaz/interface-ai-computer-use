@@ -1,0 +1,21 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes float1 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+      @keyframes float2 { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(20px); } }
+      .float1 { animation: float1 6s ease-in-out infinite; }
+      .float2 { animation: float2 8s ease-in-out infinite; }
+    </style>
+    <radialGradient id="orb1" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="orb2" cx="70%" cy="70%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#0b1020"/>
+  <circle class="float1" cx="100" cy="100" r="120" fill="url(#orb1)"/>
+  <circle class="float2" cx="300" cy="300" r="150" fill="url(#orb2)"/>
+</svg>
